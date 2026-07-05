@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 from dotenv import load_dotenv
 import os
 
@@ -26,6 +26,11 @@ def portfolio():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+# Google Search Console verification
+@app.route('/google56d6260d12f2903f.html')
+def google_verification():
+    return send_from_directory('static', 'google56d6260d12f2903f.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
