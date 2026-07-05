@@ -1,0 +1,353 @@
+{% extends "base.html" %}
+{% block title %}Emtrixz Technology — Where Others See Problems, We See Opportunities{% endblock %}
+
+{% block content %}
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow hero-bg-glow-1"></div>
+    <div class="hero-bg-glow hero-bg-glow-2"></div>
+    <div class="hero-bg-line hero-bg-line-1"></div>
+    <div class="hero-bg-line hero-bg-line-2"></div>
+    <div class="hero-bg-line hero-bg-line-3"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-label">
+        <span class="section-label">Innovation · Strategy · Technology</span>
+      </div>
+      <h1 class="hero-headline">
+        Where Others See Problems,<br>
+        <span class="text-gradient">We See Opportunities.</span>
+      </h1>
+      <p class="hero-sub">
+        At Emtrixz Technology, innovation begins where challenges exist. We partner with organizations, businesses, and
+        visionaries to transform ideas into meaningful digital solutions that create measurable impact.
+      </p>
+      <div class="hero-actions">
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">
+          Start Your Project
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline">Schedule a Consultation</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="50" data-suffix="+">0+</div>
+          <div class="hero-stat-label">Projects Delivered</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="30" data-suffix="+">0+</div>
+          <div class="hero-stat-label">Clients Served</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="5" data-suffix="+">0+</div>
+          <div class="hero-stat-label">Industries Served</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">100%</div>
+          <div class="hero-stat-label">Client Commitment</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-mockup-wrap">
+        <img src="{{ url_for('static', filename='images/hero_mockup.png') }}"
+          alt="Emtrixz Technology — Solutions that work, results that last" />
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-label">Innovation-Driven</div>
+        <div class="hero-badge-value">Your Idea. Our System.</div>
+        <div class="hero-badge-sub">Real Impact.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STRIP MARQUEE ═══ -->
+<div class="strip">
+  <div class="strip-inner">
+    {% for item in ['Software Development', 'Mobile Applications', 'AI & Intelligent Systems', 'Cloud Solutions',
+    'Cybersecurity', 'Digital Transformation', 'Technology Consulting', 'Web Design & Development',
+    'Software Development', 'Mobile Applications', 'AI & Intelligent Systems', 'Cloud Solutions', 'Cybersecurity',
+    'Digital Transformation', 'Technology Consulting', 'Web Design & Development'] %}
+    <div class="strip-item">
+      <span class="strip-dot"></span>
+      <span>{{ item }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- ═══ ABOUT SNAPSHOT ═══ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="grid-2">
+      <div class="reveal-left">
+        <span class="section-label">About Emtrixz</span>
+        <h2 class="display-lg" style="margin-top:16px;margin-bottom:24px;">
+          We Transform<br><span class="text-gradient">Ideas Into Impact.</span>
+        </h2>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:20px;">
+          Emtrixz Technology is an innovation-driven technology company dedicated to transforming ideas, challenges, and
+          opportunities into impactful digital solutions.
+        </p>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:32px;">
+          We believe every challenge presents an opportunity for innovation. We work closely with clients to understand
+          their vision, identify opportunities, solve real-world problems, and create technology solutions that deliver
+          measurable impact.
+        </p>
+        <a href="{{ url_for('about') }}" class="btn btn-outline">
+          Our Story
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="reveal-right">
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-label">Mission</div>
+            <div class="pillar-text">To design and deliver innovative technology solutions that solve real-world
+              challenges and empower businesses, organizations, and communities.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-label">Vision</div>
+            <div class="pillar-text">To become a leading force in technological innovation by transforming challenges
+              into opportunities and ideas into impactful solutions.</div>
+          </div>
+          <div class="pillar" style="grid-column:span 2;">
+            <div class="pillar-label">Our Approach</div>
+            <div class="pillar-text">We do not simply build websites and software. We help individuals, organizations,
+              and businesses transform ideas into reality through innovation, strategy, and technology. Our work is
+              guided by creativity, excellence, and a commitment to building solutions that matter.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES OVERVIEW ═══ -->
+<section class="section section-card">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">What We Build</span>
+      <h2 class="display-lg section-title">Our Services</h2>
+      <p class="section-desc">From concept to deployment, we engineer solutions that transform how businesses operate
+        and grow in the digital era.</p>
+    </div>
+
+    <div class="services-grid">
+      {% set services = [
+      ('Software Development', 'We architect and build robust, scalable software systems tailored to your operational
+      requirements, ensuring reliability, security, and performance at every level.', 'End-to-end systems that scale
+      with your business'),
+      ('Website Design & Development', 'We craft premium digital experiences — high-performance websites that
+      communicate authority, drive engagement, and convert visitors into clients.', 'Websites that establish authority
+      and generate results'),
+      ('Mobile Application Development', 'We develop native and cross-platform mobile applications that deliver seamless
+      user experiences across iOS and Android platforms.', 'Apps that users love and businesses depend on'),
+      ('AI & Intelligent Systems', 'We integrate artificial intelligence and machine learning to automate processes,
+      generate insights, and build systems that continuously improve.', 'Intelligent automation that drives competitive
+      advantage'),
+      ('Cloud Solutions', 'We design and deploy cloud infrastructure that gives your organization flexibility,
+      resilience, and cost efficiency at enterprise scale.', 'Infrastructure built for growth and reliability'),
+      ('Cybersecurity', 'We protect your digital assets with comprehensive security frameworks — from vulnerability
+      assessments to real-time threat monitoring and response.', 'Security that protects your operations and
+      reputation'),
+      ('Technology Consulting', 'We provide strategic technology advisory to help organizations make informed decisions,
+      optimize investments, and plan for the future.', 'Strategic guidance that accelerates transformation'),
+      ('Digital Transformation', 'We guide organizations through complete digital transformation — reimagining
+      processes, culture, and technology for maximum competitive impact.', 'Transformation that positions you for
+      long-term leadership'),
+      ] %}
+      {% for name, desc, outcome in services %}
+      <div class="service-card reveal delay-{{ loop.index % 4 }}">
+        <div class="service-num">0{{ loop.index }}</div>
+        <h3 class="service-name">{{ name }}</h3>
+        <p class="service-desc">{{ desc }}</p>
+        <div class="service-outcome">→ {{ outcome }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center mt-60 reveal">
+      <a href="{{ url_for('services') }}" class="btn btn-primary">
+        Explore All Services
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY CHOOSE ═══ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Why Emtrixz</span>
+      <h2 class="display-lg section-title">Built Different. <span class="text-gradient">Designed to Deliver.</span></h2>
+      <p class="section-desc">We approach every engagement with the conviction that technology should create real,
+        lasting value — not just functional deliverables.</p>
+    </div>
+
+    <div class="values-grid">
+      {% set values = [
+      ('01', 'We Build With Purpose', 'Every solution we create is designed to solve a real challenge and create
+      measurable value. We begin every engagement by deeply understanding your goals, not by jumping to technology
+      choices.'),
+      ('02', 'Innovation With Direction', 'We combine creativity, strategy, and technology to deliver results that
+      matter. Innovation without strategic clarity is noise — we ensure every solution moves you forward.'),
+      ('03', 'Partnership Beyond Delivery', 'We work alongside our clients long after launch to ensure sustained
+      success. Our commitment to your outcomes doesn\'t end when the project closes.'),
+      ('04', 'Solutions Tailored To Vision', 'Every solution is customized around the goals and opportunities unique to
+      your organization. We reject templates in favor of precision-crafted technology that fits your context.'),
+      ('05', 'Excellence In Execution', 'We maintain the highest standards from concept to deployment. Quality is not an
+      option — it is the baseline from which we build everything.'),
+      ('06', 'Impact-Driven Development', 'We measure our success by the impact our solutions create for your business,
+      your clients, and your community. Results are the only metric that matters.'),
+      ] %}
+      {% for num, title, desc in values %}
+      <div class="value-card reveal delay-{{ loop.index % 3 + 1 }}">
+        <div class="value-number">{{ num }}</div>
+        <h3 class="value-title">{{ title }}</h3>
+        <p class="value-desc">{{ desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section class="section section-navy">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">How We Work</span>
+      <h2 class="display-md section-title">Our Process</h2>
+      <p class="section-desc">A disciplined, proven methodology that transforms vision into working technology — on
+        time, on scope, on impact.</p>
+    </div>
+
+    <div class="process-steps reveal">
+      {% for step in [
+      ('01', 'Discover', 'We listen, understand your idea, goals, and the challenge we are solving together.'),
+      ('02', 'Plan', 'We design the right solution strategy, architecture, and roadmap for your needs.'),
+      ('03', 'Develop', 'We build with clean code, modern technology, and engineering best practices.'),
+      ('04', 'Test & Refine', 'We test thoroughly to ensure performance, reliability, and security across all
+      conditions.'),
+      ('05', 'Deploy & Grow', 'We launch and support your solution for sustained long-term success.'),
+      ] %}
+      <div class="process-step delay-{{ loop.index }}">
+        <div class="process-num">{{ step[0] }}</div>
+        <div class="process-title">{{ step[1] }}</div>
+        <div class="process-desc">{{ step[2] }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CLIENTS & PARTNERS ═══ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Partnerships</span>
+      <h2 class="display-md section-title">Organizations We've Worked With</h2>
+      <p class="section-desc">We are proud to collaborate with organizations and institutions that are creating
+        meaningful impact within their industries and communities.</p>
+    </div>
+
+    <div class="clients-wrap reveal">
+      <div class="client-card">
+        <img src="{{ url_for('static', filename='images/Stoplight+Favicon.jpg') }}" alt="Stoplight Approach Logo"
+          class="client-logo" />
+        <div class="client-name">Stoplight Approach</div>
+        <div class="client-sector">Creating Green Environments and mmanaging Stress.</div>
+      </div>
+      <div class="client-card">
+        <img src="{{ url_for('static', filename='images/m4l.png') }}" alt="Music For Life Logo" class="client-logo" />
+        <div class="client-name">Music For Life</div>
+        <div class="client-sector">Music And Entertainment</div>
+      </div>
+      <div class="client-card">
+        <img src="{{ url_for('static', filename='images/images.png') }}" alt="Empower International Academy Logo"
+          class="client-logo" />
+        <div class="client-name">Empower International Academy</div>
+        <div class="client-sector">Education & Leadership</div>
+      </div>
+    </div>
+
+    <p class="clients-quote reveal">"Every organization we partner with shares a commitment to creating real, meaningful
+      impact — and that alignment drives everything we build together."</p>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="section section-card">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Client Voices</span>
+      <h2 class="display-md section-title">What Our Partners Say</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      {% set testimonials = [
+      ('Emtrixz Technology didn\'t just build us a platform — they understood our vision from the first conversation.
+      Their ability to translate our ideas into a working system that actually solved our challenges was remarkable. The
+      team was professional, communicative, and genuinely invested in our success.', 'Mr.Muwonge', 'Head Of School,
+      Empower International Academy',
+      'MM'),
+      ('What sets Emtrixz apart is how deeply they engage with the problem before writing a single line of code. They
+      challenged our assumptions, helped us refine our strategy, and delivered a solution that exceeded what we
+      originally envisioned. A true technology partner.', 'Mr.Osojo Osona Charles', 'Director, Emtrixz Technology',
+      'OC'),
+      ] %}
+      {% for text, name, role, initials in testimonials %}
+      <div class="testimonial-card reveal delay-{{ loop.index }}">
+        <div class="testimonial-stars">
+          {% for _ in range(5) %}<span class="star">★</span>{% endfor %}
+        </div>
+        <p class="testimonial-text">"{{ text }}"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">{{ initials }}</div>
+          <div>
+            <div class="author-name">{{ name }}</div>
+            <div class="author-role">{{ role }}</div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <span class="section-label" style="justify-content:center;margin-bottom:20px;">
+        <span style="width:28px;height:2px;background:var(--accent);display:inline-block;"></span>
+        Ready to Begin
+        <span style="width:28px;height:2px;background:var(--accent);display:inline-block;"></span>
+      </span>
+      <h2 class="cta-headline">Ready To Turn Opportunity<br>Into <span class="text-gradient">Impact?</span></h2>
+      <p class="cta-desc">Whether you have an idea, a challenge, or a vision for the future, Emtrixz Technology is ready
+        to help you build what comes next.</p>
+      <div class="cta-actions">
+        <a href="{{ url_for('contact') }}" class="btn btn-accent">Let's Discuss Your Project</a>
+        <a href="{{ url_for('services') }}" class="btn btn-outline">View Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

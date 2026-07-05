@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+{% block title %}About Us — Emtrixz Technology{% endblock %}
+
+{% block content %}
+
+<!-- ═══ PAGE HERO ═══ -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="{{ url_for('index') }}">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>About</span>
+      </div>
+      <span class="section-label" style="margin-bottom:16px;">Our Story</span>
+      <h1 class="page-title">
+        Innovation Built on<br>
+        <span class="text-gradient">Purpose & Vision.</span>
+      </h1>
+      <p class="page-subtitle">
+        We founded Emtrixz Technology on a single conviction: that every problem contains within it the seed of an
+        opportunity — and that technology, applied with intelligence and intention, can unlock that opportunity at
+        scale.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ COMPANY STORY ═══ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="about-story">
+      <div class="about-story-text reveal-left">
+        <span class="section-label">Why We Exist</span>
+        <h2 class="display-md" style="margin-top:16px;margin-bottom:24px;">Where Every Challenge Becomes an <span
+            class="text-gradient">Opportunity.</span></h2>
+        <p>Emtrixz Technology was founded with a clear and determined purpose — to build technology that actually solves
+          problems. Not to create impressive-looking products that miss the mark, but to develop solutions that go to
+          the heart of a challenge and create lasting impact.</p>
+        <p>We recognized that many organizations — businesses, nonprofits, schools, government institutions — had
+          powerful ideas and important missions, but lacked the technology partner willing to truly understand their
+          world and build within it.</p>
+        <p>So we built that company. One that begins every engagement by listening deeply, understanding the real
+          challenge, and only then designing a technology solution calibrated to deliver genuine results.</p>
+        <p>Today, Emtrixz Technology partners with organizations across industries to transform ideas into digital
+          realities — from custom software systems and intelligent applications to comprehensive digital transformation
+          programs.</p>
+      </div>
+      <div class="reveal-right">
+        <div class="about-visual-wrap">
+          <img src="{{ url_for('static', filename='images/mm.png') }}" alt="Emtrixz Technology — Founders & Vision"
+            class="about-poster" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MISSION & VISION ═══ -->
+<section class="section section-navy">
+  <div class="container">
+    <div class="grid-2" style="gap:80px;">
+      <div class="reveal-left">
+        <span class="section-label">Mission</span>
+        <h2 class="display-md" style="margin-top:16px;margin-bottom:20px;">What We're<br>Here to Do.</h2>
+        <p style="font-size:1.05rem;color:rgba(255,255,255,0.7);line-height:1.8;">
+          To design and deliver innovative technology solutions that solve real-world challenges and empower businesses,
+          organizations, and communities.
+        </p>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.8;margin-top:16px;">
+          Every project we take on is a commitment to that mission. Every solution we build is a step toward a world
+          where technology serves its highest purpose — enabling people to do more, achieve more, and create more
+          meaningful impact.
+        </p>
+      </div>
+      <div class="reveal-right">
+        <span class="section-label">Vision</span>
+        <h2 class="display-md" style="margin-top:16px;margin-bottom:20px;">Where We're<br>Headed.</h2>
+        <p style="font-size:1.05rem;color:rgba(255,255,255,0.7);line-height:1.8;">
+          To become a leading force in technological innovation by transforming challenges into opportunities and ideas
+          into impactful solutions.
+        </p>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.8;margin-top:16px;">
+          We are building toward a future where Emtrixz Technology is recognized globally as the company that turns
+          ambitious visions into working systems — the technology partner organizations trust when the stakes are
+          highest and the vision is boldest.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CORE VALUES ═══ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Core Values</span>
+      <h2 class="display-md section-title">The Principles That<br><span class="text-gradient">Drive Everything We
+          Do.</span></h2>
+    </div>
+
+    <div class="values-list reveal" style="max-width:800px;margin:0 auto;">
+      {% for title, desc in [
+      ('Innovation', 'We approach every challenge with fresh eyes and creative thinking. Innovation is not a buzzword
+      for us — it is the methodology through which we identify better paths and build better solutions.'),
+      ('Excellence', 'We hold ourselves to the highest standards at every stage of every engagement. Excellence is not
+      negotiable — it is the baseline from which we build.'),
+      ('Integrity', 'We are honest, transparent, and accountable in everything we do. When we make commitments, we keep
+      them. When we face challenges, we communicate clearly.'),
+      ('Creativity', 'Technology solutions require technical skill AND creative thinking. We apply both, combining
+      engineering discipline with design thinking to produce solutions that work and inspire.'),
+      ('Customer Success', 'Our success is defined entirely by yours. We measure our work not by deliverables shipped,
+      but by results achieved and value created for our clients.'),
+      ('Continuous Improvement', 'We are never satisfied with good enough. We continuously study, learn, and refine our
+      craft — bringing the latest knowledge, tools, and thinking to every project.'),
+      ('Problem Solving', 'We are, at our core, problem solvers. Before we design anything, we deeply understand the
+      problem. The quality of a solution is determined by the quality of problem understanding.'),
+      ('Impact-Driven Development', 'Every technical decision we make is evaluated against a single question: does this
+      create meaningful impact? If yes, we build it. If not, we rethink.'),
+      ] %}
+      <div class="values-list-item">
+        <div class="values-icon"></div>
+        <div>
+          <div class="values-item-title">{{ title }}</div>
+          <div class="values-item-desc">{{ desc }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOUNDERS ═══ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Leadership</span>
+      <h2 class="display-md section-title">Our <span class="text-gradient">Founders.</span></h2>
+      <p class="section-desc">Emtrixz Technology was founded on a shared vision to transform ideas into impactful
+        digital solutions.</p>
+    </div>
+
+    <div class="founders-grid reveal">
+      <div class="founder-card">
+        <div class="founder-image-wrap">
+          <img src="{{ url_for('static', filename='images/mcd.png') }}" alt="Mcdonald Trinity" class="founder-image" />
+        </div>
+        <h3 class="founder-name">Mcdonald Trinity</h3>
+        <p class="founder-role">Founder & CEO</p>
+        <p class="founder-bio">Visionary leader driven by innovation and strategic thinking. Mcdonald brings deep
+          expertise in technology strategy and business transformation.</p>
+      </div>
+
+      <div class="founder-card">
+        <div class="founder-image-wrap">
+          <img src="{{ url_for('static', filename='images/emma.png') }}" alt="Emmanuel Muganzi" class="founder-image" />
+        </div>
+        <h3 class="founder-name">Emmanuel Muganzi</h3>
+        <p class="founder-role">Founder & CTO</p>
+        <p class="founder-bio">Technical innovator with a passion for engineering excellence. Emmanuel leads our
+          technology vision and ensures every solution meets the highest standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CLIENTS ═══ -->
+<section class="section section-card">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Partnerships</span>
+      <h2 class="display-md section-title">Organizations We've Worked With</h2>
+      <p class="section-desc">We are proud to collaborate with organizations and institutions that are creating
+        meaningful impact within their industries and communities.</p>
+    </div>
+    <div class="clients-wrap reveal">
+      <div class="client-card">
+        <img src="{{ url_for('static', filename='images/Stoplight+Favicon.jpg') }}" alt="Stoplight Approach Logo"
+          class="client-logo" />
+        <div class="client-name">Stoplight Approach</div>
+        <div class="client-sector">Creating Green Environments and Managing Stress.</div>
+      </div>
+      <div class="client-card">
+        <img src="{{ url_for('static', filename='images/m4l.png') }}" alt="Music For Life Logo" class="client-logo" />
+        <div class="client-name">Music For Life</div>
+        <div class="client-sector">Music And Entertainment</div>
+      </div>
+      <div class="client-card">
+        <img src="{{ url_for('static', filename='images/images.png') }}" alt="Empower International Academy Logo"
+          class="client-logo" />
+        <div class="client-name">Empower International Academy</div>
+        <div class="client-sector">Education & Leadership</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2 class="cta-headline">Ready To Build<br><span class="text-gradient">What's Next?</span></h2>
+      <p class="cta-desc">Whether you have an idea, a challenge, or a vision for the future, Emtrixz Technology is ready
+        to help you bring it to life.</p>
+      <div class="cta-actions">
+        <a href="{{ url_for('contact') }}" class="btn btn-accent">Start a Conversation</a>
+        <a href="{{ url_for('services') }}" class="btn btn-outline">Explore Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

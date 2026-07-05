@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block title %}Services — Emtrixz Technology{% endblock %}
+
+{% block content %}
+
+<!-- ═══ PAGE HERO ═══ -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="{{ url_for('index') }}">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Services</span>
+      </div>
+      <span class="section-label" style="margin-bottom:16px;">What We Build</span>
+      <h1 class="page-title">
+        Technology Solutions<br>
+        <span class="text-gradient">Built for Impact.</span>
+      </h1>
+      <p class="page-subtitle">
+        We design and deliver technology solutions across the full spectrum — from custom software and mobile applications to AI systems, cloud infrastructure, and end-to-end digital transformation.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SERVICES DETAIL ═══ -->
+<section class="section section-dark">
+  <div class="container">
+    {% set services = [
+      (
+        '01',
+        'Software Development',
+        'We architect and build robust, scalable software systems tailored to your operational requirements. From enterprise applications to specialized business tools, we engineer software that is reliable, secure, and designed to grow with your organization.',
+        ['Custom Enterprise Software', 'Business Process Automation', 'API & System Integration', 'Database Architecture', 'Performance Optimization', 'Legacy System Modernization'],
+        'Organizations that partner with us for software development gain systems that not only meet today\'s requirements but are architected to accommodate tomorrow\'s growth — reducing technical debt and future development costs.'
+      ),
+      (
+        '02',
+        'Website Design & Development',
+        'We craft premium digital experiences — high-performance websites that communicate authority, drive engagement, and convert visitors into clients. Every website we build reflects the brand identity and strategic objectives of the organization behind it.',
+        ['Corporate & Institutional Websites', 'E-Commerce Platforms', 'Landing Pages & Campaigns', 'Content Management Systems', 'Web Application Development', 'Website Performance & SEO'],
+        'Your website is often the first impression stakeholders have of your organization. We ensure that impression is one of credibility, capability, and professionalism — built to generate measurable business outcomes.'
+      ),
+      (
+        '03',
+        'Mobile Application Development',
+        'We develop native and cross-platform mobile applications that deliver seamless user experiences across iOS and Android. Our mobile solutions are designed for intuitive interaction, fast performance, and deep integration with your business systems.',
+        ['iOS & Android Development', 'Cross-Platform Applications', 'Mobile Commerce', 'Enterprise Mobile Solutions', 'App UI/UX Design', 'App Store Optimization'],
+        'Mobile is where your users live. We build applications that meet them there — with intuitive interfaces, reliable performance, and the features that keep users engaged and returning.'
+      ),
+      (
+        '04',
+        'AI & Intelligent Systems',
+        'We integrate artificial intelligence and machine learning capabilities to automate processes, generate actionable insights, and build systems that continuously improve with use. Our AI solutions are grounded in practical business value, not theoretical possibility.',
+        ['Machine Learning Integration', 'Natural Language Processing', 'Predictive Analytics', 'Intelligent Automation', 'AI-Powered Dashboards', 'Recommendation Systems'],
+        'Artificial intelligence, applied with strategic clarity, can transform how your organization operates — reducing costs, surfacing insights, and enabling decisions at scale that were previously impossible.'
+      ),
+      (
+        '05',
+        'Cloud Solutions',
+        'We design and deploy cloud infrastructure that gives your organization the flexibility, resilience, and cost efficiency needed to compete at enterprise scale. Whether migrating to the cloud or optimizing existing infrastructure, we ensure your systems are ready for what comes next.',
+        ['Cloud Migration & Strategy', 'AWS, Azure & Google Cloud', 'Infrastructure as Code', 'Cloud Security & Compliance', 'DevOps & CI/CD', 'Cost Optimization'],
+        'The right cloud strategy dramatically reduces infrastructure overhead, improves reliability, and accelerates your organization\'s ability to launch and scale new products and services.'
+      ),
+      (
+        '06',
+        'Cybersecurity',
+        'We protect your digital assets with comprehensive security frameworks — from in-depth vulnerability assessments and penetration testing to security architecture design and real-time monitoring. In a world of growing digital threats, we ensure your organization remains protected.',
+        ['Vulnerability Assessment', 'Penetration Testing', 'Security Architecture', 'Compliance & Governance', 'Incident Response', 'Security Training'],
+        'A single security breach can undo years of brand-building and cost millions in recovery. Our proactive security approach identifies and eliminates vulnerabilities before they can be exploited.'
+      ),
+      (
+        '07',
+        'Technology Consulting',
+        'We provide strategic technology advisory to help organizations make informed decisions, optimize their technology investments, and plan confidently for the future. Our consulting practice bridges the gap between business strategy and technology execution.',
+        ['Technology Strategy', 'Digital Roadmapping', 'Technology Audits', 'Vendor Selection', 'IT Governance', 'Innovation Workshops'],
+        'Organizations that invest in strategic technology consulting make better decisions faster — avoiding costly mistakes, identifying untapped opportunities, and building technology portfolios aligned to their long-term goals.'
+      ),
+      (
+        '08',
+        'Digital Transformation',
+        'We guide organizations through comprehensive digital transformation — reimagining processes, culture, and technology to maximize competitive advantage in the digital era. This is not a technology project. It is a business transformation enabled by technology.',
+        ['Transformation Strategy', 'Process Digitization', 'Change Management', 'Digital Culture Development', 'Analytics & Insights', 'Continuous Improvement'],
+        'Organizations that successfully transform digitally don\'t just improve efficiency — they unlock entirely new capabilities, revenue streams, and competitive positions that were previously unavailable to them.'
+      ),
+    ] %}
+
+    {% for num, name, desc, features, outcome in services %}
+    <div class="reveal" style="display:grid;grid-template-columns:1fr 2fr;gap:60px;padding:60px 0;border-bottom:1px solid rgba(0,102,255,0.12);align-items:start;">
+      <div>
+        <div class="service-num" style="font-size:0.78rem;font-weight:700;letter-spacing:0.2em;color:var(--accent);margin-bottom:12px;">{{ num }}</div>
+        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:16px;line-height:1.2;">{{ name }}</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;">
+          {% for feature in features %}
+          <span class="case-tag">{{ feature }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:24px;">{{ desc }}</p>
+        <div style="background:rgba(0,102,255,0.06);border:1px solid rgba(0,212,255,0.12);border-radius:4px;padding:20px 24px;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">Business Outcome</div>
+          <p style="font-size:0.92rem;color:rgba(255,255,255,0.75);line-height:1.75;">{{ outcome }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2 class="cta-headline">Not Sure Where<br><span class="text-gradient">To Start?</span></h2>
+      <p class="cta-desc">We'll help you identify the right technology solution for your challenge. Schedule a consultation and let's explore what's possible together.</p>
+      <div class="cta-actions">
+        <a href="{{ url_for('contact') }}" class="btn btn-accent">Schedule a Consultation</a>
+        <a href="{{ url_for('portfolio') }}" class="btn btn-outline">See Our Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

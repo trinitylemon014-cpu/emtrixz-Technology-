@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+{% block title %}Portfolio — Emtrixz Technology{% endblock %}
+
+{% block content %}
+
+<!-- ═══ PAGE HERO ═══ -->
+<div class="page-hero" style="position: relative;">
+  <img src="{{ url_for('static', filename='images/nh.png') }}" alt="Decorative" class="circular-image">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="{{ url_for('index') }}">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Portfolio</span>
+      </div>
+      <span class="section-label" style="margin-bottom:16px;">Case Studies</span>
+      <h1 class="page-title">
+        Work That Creates<br>
+        <span class="text-gradient">Measurable Impact.</span>
+      </h1>
+      <p class="page-subtitle">
+        Every project we undertake is a case study in turning ideas into working solutions. These are the stories of how
+        we partnered with our clients to understand their challenges and build technology that changed what was possible
+        for them.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CASE STUDIES ═══ -->
+<section class="section section-dark" style="padding-top:80px;">
+  <div class="container" style="max-width:1100px;">
+    <div class="case-studies">
+
+      <!-- Case Study 1 -->
+      <div class="case-study reveal">
+        <div class="case-meta">
+          <div class="case-client">Client</div>
+          <h2 class="case-title">Stoplight Approach — Event Registration System</h2>
+          <div class="case-tags">
+            <span class="case-tag">Web Development</span>
+            <span class="case-tag">Software Development</span>
+            <span class="case-tag">Database Design</span>
+          </div>
+        </div>
+        <div class="case-content">
+          <div class="case-block">
+            <div class="case-block-label">The Challenge</div>
+            <div class="case-block-text">Stoplight Approach, an organization creating green environments and managing
+              stress, needed an efficient way to manage event registrations and participant data. Manual registration
+              processes were time-consuming, error-prone, and limited their ability to scale their community programs
+              and environmental initiatives.</div>
+          </div>
+          <div class="case-block">
+            <div class="case-block-label">Our Solution</div>
+            <div class="case-block-text">We developed a comprehensive event registration system that automated
+              participant sign-ups, data collection, and event management. The platform included real-time registration
+              tracking, automated confirmations, participant analytics, and integration with their communication
+              systems. The result was a scalable system that allowed Stoplight Approach to expand their reach while
+              maintaining data integrity and improving participant experience.</div>
+          </div>
+          <div class="case-results">
+            <div>
+              <div class="case-result-num">90%</div>
+              <div class="case-result-label">Reduction in admin time</div>
+            </div>
+            <div>
+              <div class="case-result-num">100%</div>
+              <div class="case-result-label">Data accuracy improvement</div>
+            </div>
+            <div>
+              <div class="case-result-num">3 wks</div>
+              <div class="case-result-label">Deployment timeline</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 2 -->
+      <div class="case-study reveal">
+        <div class="case-meta">
+          <div class="case-client">Client</div>
+          <h2 class="case-title">Empower International Academy — Academic Website</h2>
+          <div class="case-tags">
+            <span class="case-tag">Web Development</span>
+            <span class="case-tag">EdTech</span>
+            <span class="case-tag">UX Design</span>
+          </div>
+        </div>
+        <div class="case-content">
+          <div class="case-block">
+            <div class="case-block-label">The Challenge</div>
+            <div class="case-block-text">Empower International Academy needed a modern, professional academic website to
+              showcase their programs, attract prospective students, and provide an online hub for current students and
+              parents. Their outdated digital presence was limiting enrollment growth and failing to communicate the
+              quality and vision of their institution.</div>
+          </div>
+          <div class="case-block">
+            <div class="case-block-label">Our Solution</div>
+            <div class="case-block-text">We designed and developed a comprehensive academic website featuring program
+              showcases, faculty profiles, student success stories, admissions information, and an intuitive content
+              management system for the academy team. The site was optimized for search engines, mobile devices, and
+              user experience — creating a professional digital front door that reflects the academy's commitment to
+              excellence and helps drive admissions inquiries.</div>
+          </div>
+          <div class="case-results">
+            <div>
+              <div class="case-result-num">45%</div>
+              <div class="case-result-label">Increase in inquiries</div>
+            </div>
+            <div>
+              <div class="case-result-num">25+</div>
+              <div class="case-result-label">Enrollment applications</div>
+            </div>
+            <div>
+              <div class="case-result-num">5 wks</div>
+              <div class="case-result-label">Delivery timeline</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 3 -->
+      <div class="case-study reveal">
+        <div class="case-meta">
+          <div class="case-client">Client</div>
+          <h2 class="case-title">Music For Life — Mentorship App</h2>
+          <div class="case-tags">
+            <span class="case-tag">Mobile Development</span>
+            <span class="case-tag">Web Application</span>
+            <span class="case-tag">Real-time Communication</span>
+          </div>
+        </div>
+        <div class="case-content">
+          <div class="case-block">
+            <div class="case-block-label">The Challenge</div>
+            <div class="case-block-text">Music For Life needed a digital platform to connect mentors with mentees,
+              facilitating meaningful mentorship relationships through music and arts-based learning. The challenge was
+              creating a platform that enabled real-time communication, progress tracking, and community building while
+              remaining intuitive for users of all technical backgrounds.</div>
+          </div>
+          <div class="case-block">
+            <div class="case-block-label">Our Solution</div>
+            <div class="case-block-text">We developed a comprehensive mentorship application for both web and mobile
+              platforms featuring mentor-mentee matching, real-time messaging, progress tracking, resource libraries,
+              and community forums. The app included intuitive scheduling, goal-setting tools, and impact measurement
+              capabilities. The result was a vibrant, engaging platform that strengthened mentorship relationships and
+              measurably improved outcomes for program participants.</div>
+          </div>
+          <div class="case-results">
+            <div>
+              <div class="case-result-num">200+</div>
+              <div class="case-result-label">Active mentorships facilitated</div>
+            </div>
+            <div>
+              <div class="case-result-num">92%</div>
+              <div class="case-result-label">User engagement rate</div>
+            </div>
+            <div>
+              <div class="case-result-num">8 wks</div>
+              <div class="case-result-label">Development & launch</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 4 -->
+      <div class="case-study reveal">
+        <div class="case-meta">
+          <div class="case-client">Electoral Client</div>
+          <h2 class="case-title">Digital Voting System</h2>
+          <div class="case-tags">
+            <span class="case-tag">Software Development</span>
+            <span class="case-tag">Security & Compliance</span>
+            <span class="case-tag">Real-time Results</span>
+          </div>
+        </div>
+        <div class="case-content">
+          <div class="case-block">
+            <div class="case-block-label">The Challenge</div>
+            <div class="case-block-text">An organization needed a secure, scalable voting system to conduct fair and
+              transparent elections for their community or institution. The system had to ensure vote integrity, prevent
+              fraud, maintain voter privacy, provide real-time result tracking, and be user-friendly for voters with
+              varying technical experience levels.</div>
+          </div>
+          <div class="case-block">
+            <div class="case-block-label">Our Solution</div>
+            <div class="case-block-text">We designed and developed a comprehensive digital voting platform featuring
+              secure voter authentication, encrypted ballot systems, real-time vote tallying, and comprehensive audit
+              trails. The solution included both voter-facing and administrator interfaces, ensuring transparency while
+              maintaining privacy. Built with enterprise-grade security protocols, the system was thoroughly tested and
+              certified for accuracy and integrity.</div>
+          </div>
+          <div class="case-results">
+            <div>
+              <div class="case-result-num">100%</div>
+              <div class="case-result-label">Vote accuracy</div>
+            </div>
+            <div>
+              <div class="case-result-num">Real-time</div>
+              <div class="case-result-label">Results transparency</div>
+            </div>
+            <div>
+              <div class="case-result-num">Zero</div>
+              <div class="case-result-label">Security incidents</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2 class="cta-headline">Ready To Create Your<br><span class="text-gradient">Success Story?</span></h2>
+      <p class="cta-desc">Every case study started with a conversation. Let's start yours today and build the solution
+        your organization needs.</p>
+      <div class="cta-actions">
+        <a href="{{ url_for('contact') }}" class="btn btn-accent">Let's Discuss Your Project</a>
+        <a href="{{ url_for('services') }}" class="btn btn-outline">Explore Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
